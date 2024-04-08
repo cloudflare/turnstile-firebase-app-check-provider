@@ -1,0 +1,72 @@
+# Learn detailed information about the fields of an extension.yaml file in the docs:
+# https://firebase.google.com/docs/extensions/reference/extension-yaml
+
+name: cloudflare-turnstile-app-check-provider
+version: 0.0.1 # Follow semver versioning
+specVersion: v1beta # Version of the Firebase Extensions specification
+# Friendly display name for your extension (~3-5 words)
+displayName: Cloudflare Turnstile App Check Provider
+# Brief description of the task your extension performs (~1 sentence)
+description: >-
+  The Cloudflare Turnstile App Check Provider for Firebase.
+license: Apache-2.0 # https://spdx.org/licenses/
+# Public URL for the source code of your extension
+sourceUrl: https://github.com/change-me/to-your-repo
+# Specify whether a paid-tier billing plan is required to use your extension.
+# Learn more in the docs: https://firebase.google.com/docs/extensions/reference/extension-yaml#billing-required-field
+billingRequired: true
+tags: [cloudflare, turnstile, appcheck, appcheck-provider]
+
+author:
+  authorName: The Cloudflare Turnstile Team
+  url: https://www.cloudflare.com/products/turnstile/
+
+# In an `apis` field, list any Google APIs (like Cloud Translation, BigQuery, etc.)
+# required for your extension to operate.
+# Learn more in the docs:
+# https://firebase.google.com/docs/extensions/reference/extension-yaml#apis-field
+
+# In a `roles` field, list any IAM access roles required for your extension to operate.
+# Learn more in the docs:
+# https://firebase.google.com/docs/extensions/reference/extension-yaml#roles-field
+roles:
+  - role: iam.serviceAccountTokenCreator
+    reason: We need the signBlob permission to mint App Check tokens on behalf of the project.
+
+# In the `resources` field, list each of your extension's functions, including the trigger for each function.
+# Learn more in the docs:
+# https://firebase.google.com/docs/extensions/reference/extension-yaml#resources-field
+resources:
+  - name: tokenExchange
+    type: firebaseextensions.v1beta.function
+    description: >-
+      Provides the token exchange service to exchange and validate Cloudflare Turnsitle tokens for AppCheck tokens.
+    properties:
+      # httpsTrigger is used for an HTTP triggered function.
+      httpsTrigger: {}
+      runtime: "nodejs18"
+# In the `params` field, set up your extension's user-configured parameters.
+# Learn more in the docs:
+# https://firebase.google.com/docs/extensions/reference/extension-yaml#params-field
+params:
+  - param: SECRETKEY
+    label: Secret Key for site verification
+    description: >-
+      This is the secret key used for exchanging Turnstile attestation for verdicts.
+    type: secret
+    required: true
+    immutable: false
+  - param: APPID
+    label: Firebase App Id
+    description: >-
+      This is the Firebase App Id for the web app used.
+    type: string
+    required: true
+    immutable: false
+  - param: ttlMinutes
+    label: TTL Minutes
+    description: >-
+      This is the length of the token validity in minutes.
+    type: string
+    required: true
+    immutable: false
