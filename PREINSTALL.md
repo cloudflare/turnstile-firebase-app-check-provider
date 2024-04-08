@@ -11,7 +11,7 @@ Use this extension to exchange a Cloudflare token for an App Check token.
 
 When triggered by an HTTP request, this extension responds with an App Check token.
 
-As a prerequisite you will need to have already setup a site to work with [Turnstile](https://developers.cloudflare.com/turnstile/)
+As a prerequisite you will need to have already set up a site to work with [Turnstile](https://developers.cloudflare.com/turnstile/)
 
 <!-- We recommend keeping the following section to explain how billing for Firebase Extensions works -->
 # Billing
