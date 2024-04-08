@@ -27,6 +27,8 @@ const provider = new CustomProvider(cpo);
 initializeAppCheck(app, { provider });
 ```
 
+The CloudflareProviderOptions implementation can be found here: https://github.com/cloudflare/turnstile-firebase-app-check
+
 <!-- We recommend keeping the following section to explain how to monitor extensions with Firebase -->
 # Monitoring
 
