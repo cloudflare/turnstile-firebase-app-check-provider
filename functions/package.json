@@ -24,7 +24,7 @@
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-import": "^2.26.0",
     "mocha": "^10.2.0",
-    "ts-node": "^10.4.0",
+    "ts-node": "^10.4.0"
   },
   "private": true,
   "packageManager": "yarn@4.1.1"
