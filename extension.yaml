@@ -63,7 +63,7 @@ params:
     type: string
     required: true
     immutable: false
-  - param: ttlMinutes
+  - param: TTL_MINUTES
     label: TTL Minutes
     description: >-
       This is the length of the token validity in minutes.
