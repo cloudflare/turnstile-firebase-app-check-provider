@@ -11,7 +11,7 @@ description: >-
   The Cloudflare Turnstile App Check Provider for Firebase.
 license: Apache-2.0 # https://spdx.org/licenses/
 # Public URL for the source code of your extension
-sourceUrl: https://github.com/change-me/to-your-repo
+sourceUrl: https://github.com/cloudflare/turnstile-firebase-app-check-provider
 # Specify whether a paid-tier billing plan is required to use your extension.
 # Learn more in the docs: https://firebase.google.com/docs/extensions/reference/extension-yaml#billing-required-field
 billingRequired: true
