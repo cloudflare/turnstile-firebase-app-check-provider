@@ -71,3 +71,7 @@ params:
     type: string
     required: true
     immutable: false
+
+externalServices:
+  - name: Turnstile Siteverify API
+    pricingUri: https://blog.cloudflare.com/turnstile-ga
