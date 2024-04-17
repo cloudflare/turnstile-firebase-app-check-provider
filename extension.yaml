@@ -15,6 +15,7 @@ sourceUrl: https://github.com/change-me/to-your-repo
 # Specify whether a paid-tier billing plan is required to use your extension.
 # Learn more in the docs: https://firebase.google.com/docs/extensions/reference/extension-yaml#billing-required-field
 billingRequired: true
+icon: icon.png
 tags: [cloudflare, turnstile, appcheck, appcheck-provider]
 
 author:
