@@ -60,14 +60,14 @@ params:
   - param: APPID
     label: Firebase App Id
     description: >-
-      This is the Firebase App Id for the web app used.
+      This is the Firebase App Id for the web app used. This can be found in the Firebase console.
     type: string
     required: true
     immutable: false
   - param: TTL_MINUTES
     label: TTL Minutes
     description: >-
-      This is the length of the token validity in minutes.
+      This is the length of the token validity in minutes. Valid range is from 30 minutes to 10080 minutes (7 days).
     type: string
     required: true
     immutable: false
