@@ -71,6 +71,9 @@ params:
     type: string
     required: true
     immutable: false
+    validationRegex: ^([3-9][0-9]|[1-9][0-9]{2}|[1-9][0-9]{3}|100[0-7][0-9]|10080)$
+    validationErrorMessage: >-
+      Valid values are between the range of 30 and 10080
 
 externalServices:
   - name: Turnstile Siteverify API
