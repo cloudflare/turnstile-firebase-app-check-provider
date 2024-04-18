@@ -16,6 +16,8 @@ You can use this extension by initializing your Firebase app as normal and then
 adding the Firebase App Check provider. Code example:
 
 ```
+import { CloudflareProviderOptions } from '@cloudflare/turnstile-firebase-app-check';
+
 const app = initializeApp(firebaseConfig);
 
 const siteKey = 'YOUR-SITEKEY';
