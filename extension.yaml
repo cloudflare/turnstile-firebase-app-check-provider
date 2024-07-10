@@ -30,9 +30,11 @@ author:
 # In a `roles` field, list any IAM access roles required for your extension to operate.
 # Learn more in the docs:
 # https://firebase.google.com/docs/extensions/reference/extension-yaml#roles-field
-roles:
-  - role: iam.serviceAccountTokenCreator
-    reason: We need the signBlob permission to mint App Check tokens on behalf of the project.
+
+# Those permissions need to be added manually by the end-user, as an extension can't grant them to itself.
+#roles:
+#  - role: iam.serviceAccountTokenCreator
+#    reason: We need the signBlob permission to mint App Check tokens on behalf of the project.
 
 # In the `resources` field, list each of your extension's functions, including the trigger for each function.
 # Learn more in the docs:
