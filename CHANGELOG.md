@@ -1,3 +1,6 @@
+## Version 0.1.0
+- fix: remove role requirement & bump version
+
 ## Version 0.0.4
 - chore: add import to POSTINSTALL
 - docs: update some language regarding ttl minutes
