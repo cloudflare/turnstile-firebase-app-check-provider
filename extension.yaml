@@ -47,7 +47,7 @@ resources:
     properties:
       # httpsTrigger is used for an HTTP triggered function.
       httpsTrigger: {}
-      runtime: "nodejs18"
+      runtime: "nodejs22"
 # In the `params` field, set up your extension's user-configured parameters.
 # Learn more in the docs:
 # https://firebase.google.com/docs/extensions/reference/extension-yaml#params-field
