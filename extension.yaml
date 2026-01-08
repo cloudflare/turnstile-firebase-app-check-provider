@@ -43,7 +43,7 @@ resources:
   - name: tokenExchange
     type: firebaseextensions.v1beta.function
     description: >-
-      Provides the token exchange service to exchange and validate Cloudflare Turnsitle tokens for AppCheck tokens.
+      Provides the token exchange service to exchange and validate Cloudflare Turnstile tokens for AppCheck tokens.
     properties:
       # httpsTrigger is used for an HTTP triggered function.
       httpsTrigger: {}
@@ -79,4 +79,4 @@ params:
 
 externalServices:
   - name: Turnstile Siteverify API
-    pricingUri: https://blog.cloudflare.com/turnstile-ga
+    pricingUri: https://www.cloudflare.com/en-gb/products/turnstile/
